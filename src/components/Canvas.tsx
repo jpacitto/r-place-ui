@@ -7,13 +7,13 @@ const originX = 0;
 const originY = 0;
 const Canvas = () => {
     const [scaleFactor, setScaleFactor] = useState(1.0);
-    
+
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const wrapperRef = useRef<HTMLDivElement>(null);
 
 
     useEffect(() => {
-        console.log('scaleFactor:', scaleFactor);
+        // console.log('scaleFactor:', scaleFactor);
         const canvas = canvasRef.current;
         const context: any = canvas?.getContext('2d');
         context.clearRect(0, 0, canvas?.width, canvas?.height);
@@ -26,8 +26,8 @@ const Canvas = () => {
             var pixel = context.getImageData(x, y, 1, 1);
             var data = pixel.data;
             const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-            console.log(x, y);
-            console.log(rgba);
+            // console.log(x, y);
+            // console.log(rgba);
         });
 
     }, [scaleFactor]);

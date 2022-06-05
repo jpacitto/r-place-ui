@@ -1,9 +1,15 @@
 import './PlaceTileButton.css';
 
-const PlaceTileButton = () => {
+interface PlaceTileButtonProps {
+    setShowColorSelector: (value: boolean) => void;
+}
+
+const PlaceTileButton = (
+    { setShowColorSelector }: PlaceTileButtonProps
+) => {
     return (
         <div className="place-tile-button-wrapper">
-            <button>
+            <button onClick={() => setShowColorSelector(true)}>
                 Place a tile
             </button>
         </div>
