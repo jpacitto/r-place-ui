@@ -25,11 +25,10 @@ const Canvas = () => {
 
             var pixel = context.getImageData(x, y, 1, 1);
             var data = pixel.data;
-            const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+            // const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
             // console.log(x, y);
             // console.log(rgba);
         });
-
     }, [scaleFactor]);
 
     const handleWheel = useCallback(
@@ -71,7 +70,7 @@ const Canvas = () => {
     useEffect(() => {
         window.addEventListener("wheel", (e) => handleWheel(e));
         // window.addEventListener("mousemove", (e) => handleMouseMove(e));
-        
+
         return () => {
             window.removeEventListener("wheel", (e) => handleWheel(e));
             // window.addEventListener("mousemove", (e) => handleMouseMove(e));

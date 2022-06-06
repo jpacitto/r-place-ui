@@ -39,7 +39,7 @@ const ColorSelector = (
     return (
         <div className={className}>
             <div className="color-control-panel">
-                <div className="color-wheel">
+                <div className="color-wheel flex-center">
                     <div className="flex-vert-center-row">
                         {colors.map((color) => (
                             <div
