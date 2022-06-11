@@ -1,7 +1,7 @@
 import './ColorSelector.css';
 
-import tick from '../../res/images/tick.png';
-import close from '../../res/images/close.png';
+import tick from 'res/images/tick.png';
+import close from 'res/images/close.png';
 
 const colors = [
     'rgb(192, 52, 0)',

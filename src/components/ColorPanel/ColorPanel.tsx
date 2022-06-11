@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import PlaceTileButton from "../PlaceTileButton";
-import ColorSelector from "../ColorSelector";
+import PlaceTileButton from "components/PlaceTileButton";
+import ColorSelector from "components/ColorSelector";
 
-import '../ColorSelector/ColorSelector.css'
+import 'components/ColorSelector/ColorSelector.css'
 
 const ColorPanel = () => {
     const [showColorSelector, setShowColorSelector] = useState(false);
